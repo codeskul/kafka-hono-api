@@ -1,0 +1,13 @@
+Use this command to launch a Kafka cluster with one Zookeeper and one Kafka broker. Add -d flag to run it in the background.
+    docker-compose -f zk-single-kafka-single.yml up -d
+
+We can stop the services by stopping the respective containers:
+    docker-compose -f zk-single-kafka-single.yml stop
+
+To remove all the resources including the containers altogether, use down instead of stop:
+    docker-compose -f zk-single-kafka-single.yml down
+
+
+Manual
+To run Zookeeper
+docker run -p 2181:2181 zookeeper
